@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show</title>
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+        <a href="/home" class="btn btn-primary">back</a>
+        <h1><center><p><%= campground.name %></p></center></h1>
+        <p><center> <img src=<%= campground.url %>></center></p>
+        <h3><center><p><%= campground.description %></p></center></h3>
+        <% campground.comments.forEach((comment)=>{ %>
+            <%= comment.author %> - <strong><%= comment.text %></strong>
+
+        <% }); %>
+        </div>
+
+    </div>
+
+</body>
+</html>

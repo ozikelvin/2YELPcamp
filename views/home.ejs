@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yelp Camp</title>
+    <link rel="stylesheet" href="/app.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+    <header>
+       <div class="container">
+           <div class="jumbotron">
+                <h4>Welcome to the Yelp Camp page</h4>
+                <p>You can add and see new pix here</p>
+           </div>
+           <a href="/login" class="btn btn-primary">Add new camp</a>
+           <a href="/remove" class="btn btn-primary">delete a pic</a>
+           <div>
+            <form action="/search" method="POST">
+                <input type="text" placeholder="Search" name="search">
+            </form>
+           </div>
+        </header>
+
+
+        <div class="row">
+            <% campground.forEach((campground)=>{ %>
+                <div class="col-md-3 col-sm-6">
+                    <div class="thumbnail">
+                        <img src="<%=campground.url %>" alt="">
+                        <div class="caption">
+                            <h4> <%= campground.name %></h4>
+                        </div>
+                        <p><a href="/home/<%= campground._id %>" class="btn btn-primary">view info</a></p>
+                    </div>
+                </div>
+       <% }); %>
+        </div>
+
+       </div>
+
+
+
+
+
+
+    <script type="text/javascript"    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

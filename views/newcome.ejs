@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h2><center>Add a new comment <%= campground.name%></center></h2>
+            <a href="/home" class="btn btn-primary">back</a>
+            <div class="fm">
+            <form action="/home/<%= campground._id %>/comment" method="POST">
+                <div class="form-group">
+                <input type="text" name="comment[text]" class="form-control" placeholder='text'>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="comment[author]" class="form-control" placeholder="author">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-success">submit</button>
+                </div>
+            </form>
+        </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/javascript"    src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+div{
+    margin: auto;
+    padding: 10px 10px 0 10px;
+}
+.fm{
+    width: 30%;
+    margin: 0 auto;
+
+}
+img{
+    border: 3px solid brown;
+    box-shadow: 4px 5px 7px slategrey ;
+    border-radius: 9.5px;
+}
